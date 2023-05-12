@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <nav class="navbar ">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" width="80" height="75" alt="">
+      </a>
+    </nav>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="form.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script type="text/javascript">
+    
+    function validation()
+    {
+      var fname = document.getElementById('fname').value;
+      var email = document.getElementById('email').value;
+      
+      if(fname == ""){
+        document.getElementById('fnamee').innerHTML="Please write your name";
+      }
+      if(email == ""){
+        document.getElementById('emaill').innerHTML="Write your email";
+      }
+      var phone = document.getElementById('mb').value;
+      var mobileexp = /^\d{10}$/;
+      if(phone.match(mobileexp)){
+        
+      }
+      else{
+        document.getElementById('mbb').innerHTML="Enter 10 digit valid number";
+        return false;
+      }
+    } 
+   </script>
+  </head>
+  <body>
+    <h2>Please fill this survey form regarding our Cascode Committee!!!</h2><br>
+    <div class="container">
+    <div class="form">
+        <form name="myform" action="#" onsubmit="return validation();">
+            <label for="fname">Full name : </label><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter your full name..">
+              <br><span id="fnamee"></span>
+            <br><label for="email">Email Id : </label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email id..">
+              <br><span id="emaill"></span>
+            <br><label for="mb">Mobile No : </label><br>
+            <input type="text" id="mb" name="mb" placeholder="Enter your mobile number..">
+              <br><span id="mbb"></span>
+            <br><label for="q1">Under which domain you have done intership programme at Cascode? </label><br>
+            <select name="q1" id="q1">
+              <option value="sel">Select</option>
+              <option value="Web">Web Development</option>
+              <option value="android">Android Development</option>
+              <option value="Ui/Ux">Ui/Ux</option>
+              <option value="">Data Science</option>
+            </select><br><br>
+            <label for="q2">Any domain suggestion to addon?</label><br>
+            <input type="text" id="q2" name="q2" placeholder="Suggest us!"><br><br>
+            <label for="q3">From where you came to know about Cascode?</label><br>
+            <input type="text" id="q3" name="q3" placeholder="Tell us!"><br><br>
+            <label for="review">What's your opinion about Cascode?</label><br>
+            <textarea type="textarea" id="review" name="review" placeholder="Share your opinion" width="50" height="50"></textarea><br><br>
+            <label for="change">Any changes to be done?</label><br>
+            <textarea type="textarea" id="change" name="change" placeholder="Type here.."></textarea><br><br>
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+      </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
